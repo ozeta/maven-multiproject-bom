@@ -1,7 +1,9 @@
 package dev.oz.leafB;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 
 public class ArrowIf {
@@ -12,9 +14,9 @@ public class ArrowIf {
     }
 
     static public class Dto {
-        static List<Tuple> branchList = new LinkedList<>();
-        public <T> void add(String key1, T i) {
-            branchList.add(new Tuple<>(key1, i));
+        static Map branchMap = new HashMap<>();
+        public <K,V> void add(K key1, V i) {
+            branchMap.put(key1, new Tuple<>(i));
         }
     }
 

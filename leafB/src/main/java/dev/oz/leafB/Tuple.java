@@ -5,6 +5,10 @@ class Tuple<A, B, C> {
     public B second;
     public C third;
 
+    public Tuple(A a) {
+        first = a;
+    }
+
     public Tuple(A a, B b) {
         first = a;
         second = b;
